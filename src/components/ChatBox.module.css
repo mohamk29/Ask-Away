@@ -34,6 +34,8 @@
 .inputField:focus {
   transform: scale(1.02); /* Slightly enlarge the input field */
   transition: transform 0.2s ease-in-out;
+  outline: none; /* Removes default browser outline */
+  box-shadow: 0 0 5px #007bff; /* Adds a soft glow */
 }
 
 .submitButton {

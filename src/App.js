@@ -26,7 +26,7 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(`Server responded with a ${response.status} status`);
       }
 
       const data = await response.json();
@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <Header />
       <MessageDisplay messages={messages} />
-      {loading && <p>Typing...</p>}
+      {loading && <p className="typingIndicator">Typing...</p>}
       <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );

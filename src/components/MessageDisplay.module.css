@@ -25,14 +25,16 @@
   margin-bottom: 10px;
   margin-top: 10px; /* Added margin-top for spacing between messages */
   padding: 10px;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 1.8rem; /* Rounded corners */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
   animation: fadeIn 0.5s ease-out;
   clear: both; /* Clears floating elements, making each message appear on a new line */
+  transition: opacity 0.5s ease-out;
 }
 
 .user {
   background-color: #7a2eda; /* Purple shade for user messages */
+
   float: right; /* Floats the user message to the right */
 }
 
