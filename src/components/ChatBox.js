@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import styles from "./ChatBox.module.css";
 
 const ChatBox = ({ onSendMessage }) => {
-  const [message, setMessage] = React.useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -10,14 +11,17 @@ const ChatBox = ({ onSendMessage }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <input
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Type your message..."
+        className={styles.inputField}
       />
-      <button type="submit">Send</button>
+      <button type="submit" className={styles.submitButton}>
+        Send
+      </button>
     </form>
   );
 };

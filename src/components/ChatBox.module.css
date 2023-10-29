@@ -1,0 +1,15 @@
+/* ChatBox.module.css */
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.inputField {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.submitButton {
+  padding: 5px 10px;
+}

@@ -1,0 +1,22 @@
+/* MessageDisplay.module.css */
+.messageDisplay {
+  padding: 10px;
+  background-color: #f4f4f8;
+  min-height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.user {
+  text-align: right;
+  background-color: #d1e7dd;
+}
+
+.ai {
+  text-align: left;
+  background-color: #f8d7da;
+}
