@@ -11,7 +11,6 @@
   padding: 20px;
   background-color: #121212;
   min-height: 400px; /* Increase for more space */
-  overflow-y: auto;
   border-bottom: 1px solid #eaeaea;
   scroll-behavior: smooth;
   flex-grow: 1;
@@ -20,22 +19,24 @@
 
 .message {
   color: #ffffff;
+  display: inline-block;
   max-width: 70%; /* Prevents messages from being too wide */
   word-wrap: break-word; /* Ensures text wraps */
   margin-bottom: 10px;
+  margin-top: 10px; /* Added margin-top for spacing between messages */
   padding: 10px;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
   animation: fadeIn 0.5s ease-out;
+  clear: both; /* Clears floating elements, making each message appear on a new line */
 }
 
 .user {
-  text-align: right;
-  background-color: #1a1a1a;
-  margin-left: auto; /* Aligns user messages to the right */
+  background-color: #7a2eda; /* Purple shade for user messages */
+  float: right; /* Floats the user message to the right */
 }
 
 .ai {
-  text-align: left;
-  background-color: #2a2a2a;
+  background-color: #2a2a2a; /* Dark gray shade for AI messages */
+  float: left; /* Floats the AI message to the left */
 }
