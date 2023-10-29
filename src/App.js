@@ -6,9 +6,14 @@ import "./App.css";
 function App() {
   const [messages, setMessages] = useState([]);
 
-  const handleSendMessage = (text) => {
-    setMessages([...messages, { text, sender: "user" }]);
-    // We'll later add code here to send the message to the AI and receive a response
+  const handleSendMessage = async (text) => {
+    // Update state with user message
+    const newUserMessage = { text, sender: "user" };
+    setMessages((messages) => [...messages, newUserMessage]);
+
+    // Placeholder for sending message to AI
+    // This is where we will call the function to interact with the AI
+    // We'll implement this next
   };
 
   return (
