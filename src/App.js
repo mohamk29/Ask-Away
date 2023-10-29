@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
 import ChatBox from "./components/ChatBox";
 import MessageDisplay from "./components/MessageDisplay";
 import "./App.css";
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <MessageDisplay messages={messages} />
       {loading && <p>Processing...</p>}
       <ChatBox onSendMessage={handleSendMessage} />
