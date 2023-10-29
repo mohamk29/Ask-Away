@@ -1,15 +1,56 @@
-/* ChatBox.module.css */
+.inputField {
+  background-color: #121212; /* match body bg */
+  color: #ffffff; /* white text */
+  border: 1px solid #2a2a2a;
+}
+
+.submitButton {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
 .form {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  align-items: center;
+  background-color: #1e1e1e; /* similar to navbar */
+  border: 1px solid #2a2a2a;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  flex-shrink: 0;
+  height: 3rem;
+  z-index: 10; /* add this line */
+  position: relative; /* add this line */
 }
 
 .inputField {
   flex-grow: 1;
   margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Readable text size */
+}
+
+.inputField:focus {
+  transform: scale(1.02); /* Slightly enlarge the input field */
+  transition: transform 0.2s ease-in-out;
 }
 
 .submitButton {
-  padding: 5px 10px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3; /* Slightly darker on hover */
+}
+
+.submitButton:active {
+  transform: scale(0.98); /* Slightly shrink the button */
 }

@@ -1,22 +1,41 @@
-/* MessageDisplay.module.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .messageDisplay {
-  padding: 10px;
-  background-color: #f4f4f8;
-  min-height: 300px;
+  padding: 20px;
+  background-color: #121212;
+  min-height: 400px; /* Increase for more space */
   overflow-y: auto;
+  border-bottom: 1px solid #eaeaea;
+  scroll-behavior: smooth;
+  flex-grow: 1;
+  overflow-y: auto; /* Add scrolling in case messages overflow the available height */
 }
 
 .message {
+  color: #ffffff;
+  max-width: 70%; /* Prevents messages from being too wide */
+  word-wrap: break-word; /* Ensures text wraps */
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  animation: fadeIn 0.5s ease-out;
 }
 
 .user {
   text-align: right;
-  background-color: #e6f7ff; /* Adjusted to light blue */
+  background-color: #1a1a1a;
+  margin-left: auto; /* Aligns user messages to the right */
 }
 
 .ai {
   text-align: left;
-  background-color: #f2f2f2; /* Adjusted to light gray */
+  background-color: #2a2a2a;
 }

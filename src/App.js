@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <Header />
       <MessageDisplay messages={messages} />
-      {loading && <p>Processing...</p>}
+      {loading && <p>Typing...</p>}
       <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );
