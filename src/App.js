@@ -5,20 +5,50 @@ import "./App.css";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSendMessage = async (text) => {
+    setLoading(true); // Set loading to true at the beginning
+
     // Update state with user message
     const newUserMessage = { text, sender: "user" };
     setMessages((messages) => [...messages, newUserMessage]);
 
-    // Placeholder for sending message to AI
-    // This is where we will call the function to interact with the AI
-    // We'll implement this next
+    // Send the message to the backend
+    try {
+      const response = await fetch("http://localhost:8080/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: text }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+
+      // Update state with AI's message
+      const aiMessage = { text: data.message, sender: "ai" };
+      setMessages((messages) => [...messages, aiMessage]);
+
+      setLoading(false); // Set loading to false at the end
+    } catch (error) {
+      console.error("There was an error:", error);
+      const errorMessage = {
+        text: "Error communicating with server",
+        sender: "system",
+      };
+      setMessages((messages) => [...messages, errorMessage]);
+    }
   };
 
   return (
     <div className="App">
       <MessageDisplay messages={messages} />
+      {loading && <p>Processing...</p>}
       <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );
