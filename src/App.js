@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ChatBox from "./components/ChatBox";
+import MessageDisplay from "./components/MessageDisplay";
+import "./App.css";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  const handleSendMessage = (text) => {
+    setMessages([...messages, { text, sender: "user" }]);
+    // We'll later add code here to send the message to the AI and receive a response
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MessageDisplay messages={messages} />
+      <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );
 }
