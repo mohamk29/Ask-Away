@@ -6,7 +6,7 @@ const MessageDisplay = ({ messages }) => {
     <div className={styles.messageDisplay}>
       {messages.map((msg, index) => (
         <div key={index} className={`${styles.message} ${styles[msg.sender]}`}>
-          <p>{msg.text}</p>
+          {msg.text}
         </div>
       ))}
     </div>
