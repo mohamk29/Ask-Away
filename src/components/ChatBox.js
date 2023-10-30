@@ -21,8 +21,11 @@ const ChatBox = ({ onSendMessage }) => {
         placeholder="Type your message..."
         className={styles.inputField}
       />
-      <button type="submit" className={styles.submitButton}>
-        Send
+      <button
+        type="submit"
+        className={message ? styles.activeButton : styles.submitButton}
+      >
+        ➤
       </button>
     </form>
   );

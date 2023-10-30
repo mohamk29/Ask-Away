@@ -18,44 +18,61 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   flex-shrink: 0;
   height: 3rem;
+  width: 70%;
   z-index: 10;
-  position: relative;
-}
-
-.chatContainer {
-  padding: 20px;
-  background-color: #1e1e1e; /* You can adjust this to fit the overall theme */
-  border-radius: 8px; /* Add rounded corners */
+  border-radius: 20px;
 }
 
 .inputField {
   flex-grow: 1;
   margin-right: 10px;
+  padding: 10px 10px 10px 40px; /* Padding to accommodate the icon */
+  border-radius: 25px; /* More rounded edges */
   padding: 10px;
   border-radius: 4px; /* Rounded corners */
   font-size: 16px; /* Readable text size */
 }
 
+.inputField::before {
+  content: "\2709";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
 .inputField:focus {
-  transform: scale(1.02); /* Slightly enlarge the input field */
+  transform: scale(1.012); /* Slightly enlarge the input field */
   transition: transform 0.2s ease-in-out;
   outline: none; /* Removes default browser outline */
   box-shadow: 0 0 5px #007bff; /* Adds a soft glow */
 }
 
 .submitButton {
-  background-color: #6225ae; /* Primary color */
+  background-color: transparent;
+  /* background-color: #6225ae;  */
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.activeButton {
+  background-color: #6225ae;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #552099; /* Slightly darker on hover */
+  background-color: #6225ae;
 }
 
 .submitButton:active {
