@@ -13,6 +13,7 @@
   scroll-behavior: smooth;
   flex-grow: 1;
   overflow-y: auto;
+  margin-bottom: 2rem;
 }
 
 .message {
