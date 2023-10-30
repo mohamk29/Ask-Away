@@ -9,36 +9,34 @@
 
 .messageDisplay {
   padding: 20px;
-  background-color: #121212;
-  min-height: 400px; /* Increase for more space */
-  border-bottom: 1px solid #eaeaea;
+  background-color: #1a1a1a;
   scroll-behavior: smooth;
   flex-grow: 1;
-  overflow-y: auto; /* Add scrolling in case messages overflow the available height */
+  overflow-y: auto;
 }
 
 .message {
   color: #ffffff;
   display: inline-block;
-  max-width: 70%; /* Prevents messages from being too wide */
-  word-wrap: break-word; /* Ensures text wraps */
+  max-width: 70%;
+  word-wrap: break-word;
   margin-bottom: 10px;
-  margin-top: 10px; /* Added margin-top for spacing between messages */
+  margin-top: 10px;
+  font-family: "Roboto";
   padding: 10px;
-  border-radius: 1.8rem; /* Rounded corners */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 1.8rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-out;
-  clear: both; /* Clears floating elements, making each message appear on a new line */
+  clear: both;
   transition: opacity 0.5s ease-out;
 }
 
 .user {
-  background-color: #7a2eda; /* Purple shade for user messages */
-
-  float: right; /* Floats the user message to the right */
+  background-color: #7a2eda;
+  float: right;
 }
 
 .ai {
-  background-color: #2a2a2a; /* Dark gray shade for AI messages */
-  float: left; /* Floats the AI message to the left */
+  background-color: #2a2a2a;
+  float: left;
 }

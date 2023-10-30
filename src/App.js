@@ -49,6 +49,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <MessageDisplay messages={messages} />
       {loading && <p className="typingIndicator">Typing...</p>}
       <ChatBox onSendMessage={handleSendMessage} />

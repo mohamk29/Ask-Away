@@ -1,8 +1,24 @@
 .header {
-  background-color: #1e1e1e;
-  padding: 20px 0;
+  background-color: #262626;
+  padding: 1rem;
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ask {
+  color: #6225ae;
+  background: linear-gradient(#6225ae, #552099);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.away {
+  color: #6225ae;
+  background: linear-gradient(#6225ae, #552099);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,7 +1,7 @@
 .inputField {
-  background-color: #121212; /* match body bg */
+  background-color: #262626; /* Using the second shade of grey */
   color: #ffffff; /* white text */
-  border: 1px solid #2a2a2a;
+  border: 1px solid #311257; /* Using the first shade of purple */
 }
 
 .submitButton {
@@ -12,21 +12,26 @@
 .form {
   display: flex;
   align-items: center;
-  background-color: #1e1e1e; /* similar to navbar */
+  background-color: #1e1e1e;
   border: 1px solid #2a2a2a;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   flex-shrink: 0;
   height: 3rem;
-  z-index: 10; /* add this line */
-  position: relative; /* add this line */
+  z-index: 10;
+  position: relative;
+}
+
+.chatContainer {
+  padding: 20px;
+  background-color: #1e1e1e; /* You can adjust this to fit the overall theme */
+  border-radius: 8px; /* Add rounded corners */
 }
 
 .inputField {
   flex-grow: 1;
   margin-right: 10px;
   padding: 10px;
-  border: 1px solid #eaeaea;
   border-radius: 4px; /* Rounded corners */
   font-size: 16px; /* Readable text size */
 }
@@ -39,7 +44,7 @@
 }
 
 .submitButton {
-  background-color: #007bff; /* Primary color */
+  background-color: #6225ae; /* Primary color */
   color: white;
   padding: 10px 15px;
   border: none;
@@ -50,7 +55,7 @@
 }
 
 .submitButton:hover {
-  background-color: #0056b3; /* Slightly darker on hover */
+  background-color: #552099; /* Slightly darker on hover */
 }
 
 .submitButton:active {

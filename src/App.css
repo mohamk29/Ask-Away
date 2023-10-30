@@ -2,13 +2,16 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #1a1a1a;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .typingIndicator {
   text-align: center;
   padding: 10px;
   font-style: italic;
-  color: #666;
+  color: white;
   animation: blink 1s step-start infinite;
 }
 
