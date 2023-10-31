@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./MessageDisplay.module.css";
+import TypingIndicator from "./TypingIndicator";
 
-const MessageDisplay = ({ messages }) => {
+const MessageDisplay = ({ messages, loading }) => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -15,6 +16,11 @@ const MessageDisplay = ({ messages }) => {
           {msg.text}
         </div>
       ))}
+      {loading && (
+        <div className={`${styles.message} ${styles.ai}`}>
+          <TypingIndicator />
+        </div>
+      )}
       <div ref={messagesEndRef}></div>
     </div>
   );

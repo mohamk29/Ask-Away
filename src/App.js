@@ -52,9 +52,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
-      <MessageDisplay messages={messages} />
-      {loading && <p className="typingIndicator">Typing...</p>}
+      <MessageDisplay messages={messages} loading={loading} />
       <ChatBox onSendMessage={handleSendMessage} />
     </div>
   );

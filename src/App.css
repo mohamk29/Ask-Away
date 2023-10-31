@@ -4,17 +4,3 @@
   flex-direction: column;
   background-color: #262626;
 }
-
-.typingIndicator {
-  text-align: center;
-  padding: 10px;
-  font-style: italic;
-  color: white;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
