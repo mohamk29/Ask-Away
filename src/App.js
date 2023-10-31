@@ -18,7 +18,7 @@ function App() {
     // Send the message to the backend
     try {
       const response = await fetch(
-        "https://bustling-sedate-scissor.glitch.me",
+        "https://bustling-sedate-scissor.glitch.me/chat",
         {
           method: "POST",
           headers: {
