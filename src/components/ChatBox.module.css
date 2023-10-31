@@ -13,7 +13,7 @@
   display: flex;
   background-color: #1e1e1e;
   border: 1px solid #2a2a2a;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   flex-shrink: 0;
   height: 3rem;
@@ -22,6 +22,10 @@
   border-radius: 20px;
   margin-left: auto; /* Added */
   margin-right: auto; /* Added */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .inputField {
@@ -62,7 +66,7 @@
   transition: background-color 0.3s ease;
 }
 .activeButton {
-  background-color: #6225ae;
+  background-color: #a58e66;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -73,7 +77,7 @@
 }
 
 .submitButton:hover {
-  background-color: #6225ae;
+  background-color: #a58e66;
 }
 
 .submitButton:active {

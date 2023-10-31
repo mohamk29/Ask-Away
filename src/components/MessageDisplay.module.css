@@ -13,7 +13,7 @@
   scroll-behavior: smooth;
   flex-grow: 1;
   overflow-y: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 }
 
 .message {
@@ -34,10 +34,10 @@
 
 .user {
   background-color: #007bff;
-  /* #7a2eda */
   float: right;
 }
 .ai {
-  background-color: #7c6a4d;
+  background-color: #907c5a;
+
   float: left;
 }
