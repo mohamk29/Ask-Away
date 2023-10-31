@@ -33,11 +33,11 @@
 }
 
 .user {
-  background-color: #7a2eda;
+  background-color: #007bff;
+  /* #7a2eda */
   float: right;
 }
-
 .ai {
-  background-color: #2a2a2a;
+  background-color: #7c6a4d;
   float: left;
 }

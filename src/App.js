@@ -17,13 +17,16 @@ function App() {
 
     // Send the message to the backend
     try {
-      const response = await fetch("http://localhost:8080/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: text }),
-      });
+      const response = await fetch(
+        "https://bustling-sedate-scissor.glitch.me",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message: text }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Server responded with a ${response.status} status`);
