@@ -6,7 +6,10 @@ const MessageDisplay = ({ messages, loading }) => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const messageBox = messagesEndRef.current?.parentNode;
+    if (messageBox) {
+      messageBox.scrollTop = messageBox.scrollHeight;
+    }
   }, [messages]);
 
   return (
