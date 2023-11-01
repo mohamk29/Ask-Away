@@ -14,14 +14,14 @@
   background-color: #1e1e1e;
   border: 1px solid #2a2a2a;
   padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
   height: 3rem;
   width: 70%;
   z-index: 10;
   border-radius: 20px;
-  margin-left: auto; /* Added */
-  margin-right: auto; /* Added */
+  margin-left: auto;
+  margin-right: auto;
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -31,11 +31,11 @@
 .inputField {
   flex-grow: 1;
   margin-right: 10px;
-  padding: 10px 10px 10px 40px; /* Padding to accommodate the icon */
-  border-radius: 25px; /* More rounded edges */
+  padding: 10px 10px 10px 40px;
+  border-radius: 25px;
   padding: 10px;
-  border-radius: 4px; /* Rounded corners */
-  font-size: 16px; /* Readable text size */
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .inputField::before {
@@ -48,10 +48,10 @@
 }
 
 .inputField:focus {
-  transform: scale(1.012); /* Slightly enlarge the input field */
+  transform: scale(1.012);
   transition: transform 0.2s ease-in-out;
-  outline: none; /* Removes default browser outline */
-  box-shadow: 0 0 5px #007bff; /* Adds a soft glow */
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
 }
 
 .submitButton {
@@ -81,5 +81,5 @@
 }
 
 .submitButton:active {
-  transform: scale(0.98); /* Slightly shrink the button */
+  transform: scale(0.98);
 }

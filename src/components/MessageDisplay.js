@@ -3,17 +3,16 @@ import styles from "./MessageDisplay.module.css";
 import TypingIndicator from "./TypingIndicator";
 
 const MessageDisplay = ({ messages, loading }) => {
-  const messagesEndRef = useRef(null);
+  const messageBoxRef = useRef(null);
 
   useEffect(() => {
-    const messageBox = messagesEndRef.current?.parentNode;
-    if (messageBox) {
-      messageBox.scrollTop = messageBox.scrollHeight;
+    if (messageBoxRef.current) {
+      messageBoxRef.current.scrollTop = messageBoxRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, loading]);
 
   return (
-    <div className={styles.messageDisplay}>
+    <div className={styles.messageDisplay} ref={messageBoxRef}>
       {messages.map((msg, index) => (
         <div key={index} className={`${styles.message} ${styles[msg.sender]}`}>
           {msg.text}
@@ -24,7 +23,6 @@ const MessageDisplay = ({ messages, loading }) => {
           <TypingIndicator />
         </div>
       )}
-      <div ref={messagesEndRef}></div>
     </div>
   );
 };

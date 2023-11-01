@@ -13,7 +13,9 @@
   scroll-behavior: smooth;
   flex-grow: 1;
   overflow-y: auto;
+  max-height: 100%;
   margin-bottom: 10rem;
+  padding-top: 5.7rem;
 }
 
 .message {
@@ -38,6 +40,5 @@
 }
 .ai {
   background-color: #907c5a;
-
   float: left;
 }
